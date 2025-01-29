@@ -1,13 +1,26 @@
-const express =require('express')
-const mysql2 =  require('mysql2')
-const cors = require('cors')
-const dotenv = require('dotenv'); //initializes dotenv file
+import express from 'express';
+import mysql2 from 'mysql2';
+import cors from 'cors';
+import dotenv from 'dotenv';//initializes dotenv file
 
 dotenv.config();
+import path from 'path'
+import { fileURLToPath } from 'url';
 
 //initializing express
 const app = express()
 app.use(cors())
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+
+
+
+
+app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../dist")));
 
 
 //creating connection between db and codebase 
@@ -19,7 +32,13 @@ const db = mysql2.createConnection({
 
 })
 
-app.get('/', (req,res)=>{
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../dist/index.html"));
+//   });
+
+
+
+  app.get('/', (req,res)=>{
     return res.json('from backend side')
 })
 app.get('/products', (req,res)=>{
