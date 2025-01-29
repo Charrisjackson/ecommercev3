@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .btnsf{
+    background-color: #009688;
+  }
+ 
+  body {
+   
+    background-color: black;
+    width: 100vw;
+    cursor: pointer;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 200px;
+    font-size: 20px;
+    overflow: auto;
+  }
+
+   
+   #prices{
+    background-color: #78776f;
+   }
+  ul li a {
+    text-decoration: none;
+    color: #fffdd0;
+  }
+  a {
+    text-decoration: none;
+    color: #fffdd0;
+  }
+  p {
+    font-family: "Courier New", Courier, monospace;
+    color: #78776f;
+    margin: 0 auto;
+  }
+  h1 {
+    font-family: "Courier New", Courier, monospace;
+    color: #22c4b4;
+    margin: 0 auto;
+  }
+  
+  .card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+justify-content: center;
+padding: 8px;
+    border-radius: 6px;
+  row-gap: 2px;
+    border: rgb(20, 18, 18);
+    /* background-color: #1e1e1e; */
+  border: 2px solid #1e1e1e
+
+  }
+
+
+
+  .card:hover {
+    background-color: #1e1e1e;
+  }
+ 
+  .logo {
+    color: #fffdd0;
+    position: relative;
+    left: 0;
+    width: 120px;
+  }
+  
+
+
+  
+  main {
+    text-align: center;
+    font-size: small;
+  }
+  
+  /* product page navbar */
+
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product {
+    font-family: "Courier New", Courier, monospace;
+    display: grid;
+    grid-template-columns: (1fr, 1fr, 1fr);
+  }
+  .productimage {
+    width: 200px;
+    height: 200px;
+  }
+
+  
+  .product {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    width: 100%;
+  }
+  
+  .price {
+    color: #009688;
+    font-size: 22px;
+  }
+  
+  .product button {
+    border: 1px solid #009688;
+    border-radius: 5px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    /* background-color: #009688; */
+    text-align: center;
+    cursor: pointer;
+    width: 60%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .card h1 {
+    font-size: 30px;
+    color: #78776f;
+  }
+  #filterbtns{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px;
+  }
+
+  #filterbtns button {
+    background-color: grey;
+  border-radius: 5px;
+
+  }
+  
+  .logo {
+    width: 120px;
+    display: flex;
+    left: 0;
+    margin-left: 50px;
+  }
+  .productNav ul li {
+  
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .productNav ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .productNav ul li:hover::after {
+    width: 100%;
+  }
+  .ProductNav {
+     /* z-index: 1000; */
+  width: 98%;
+  margin: 0 auto;
+  height: 90px;
+  padding: 25px 35px;
+  top: 0;
+  display: flex;
+  /* background-color: rgba(10, 204, 214, 0.18); */
+/* margin-bottom: 50px; */
+  align-items: center;
+  justify-content: space-around;
+  /* position: absolute; */
+  }
+  
+  
+
+  /* responsiveness */
+  @media only screen and (min-width: 370px) and (max-width: 699px) {
+    #product-list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 75%;
+      margin: 0 auto;
+      overflow: scroll;
+    }
+    .nav-links a {
+      margin: 0.5rem;
+      text-decoration: none;
+    }
+  
+    .footer-links a {
+      margin: 0.5rem;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  @media only screen and (min-width: 700px) and (max-width: 1000px) {
+    #product-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    .banner {
+      width: auto;
+    }
+    .productNav {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      padding-top: 0;
+    }
+  }

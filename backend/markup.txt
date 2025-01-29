@@ -1,0 +1,7 @@
+
+//create 2 folders, the fronend ans the backend
+//cd into the backend folder 
+// initialize node in the terminal using npm init
+//download express, mysql and nodemon using npm install express mysql cors nodemon command
+//change the start script in package json
+
