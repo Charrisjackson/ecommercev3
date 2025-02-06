@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 import '../styles/styles.css'
 import heroImage from '../assets/hero.jpeg';
 import { NavLink, Link } from 'react-router-dom';
