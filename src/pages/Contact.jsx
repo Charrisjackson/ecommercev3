@@ -1,7 +1,8 @@
 import { useState } from "react";
-import './contact.css';
-import Productnavbar from "./ProductNav";
-import Footer from "./Footer";
+import '../styles/contact.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 export default function Contact() {
   const [errors, setErrors] = useState({});
@@ -49,7 +50,8 @@ export default function Contact() {
 
   return (
     <>
-      <Productnavbar />
+      <Navbar />
+   
       <h1 className="contacth1">CONTACT US!</h1>
       <div className="main-wrapper">
         <div className="form-wrapper">
@@ -78,12 +80,12 @@ export default function Contact() {
                 {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
             </div>
-            <div>
+            
               <label htmlFor="message" className="form-label message">Message</label>
               <textarea rows="6" name="message" id="message" placeholder="Type your message" className="form-input"></textarea>
               {errors.message && <p className="error">{errors.message}</p>}
-            </div>
-            <button type="submit" className="form-button">Submit</button>
+       
+            <button type="submit" className="bttn">Submit</button>
           </form>
         </div>
       </div>

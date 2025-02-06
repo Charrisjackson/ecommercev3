@@ -2,7 +2,7 @@
 import { Link } from "react-router"
 
 import { Facebook, Instagram,Twitter } from 'lucide-react';
-import './styles.css'
+import '../styles/styles.css'
 export default function Footer(){
 return(
     <>

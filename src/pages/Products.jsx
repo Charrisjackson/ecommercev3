@@ -1,12 +1,12 @@
-import Productnavbar from "./ProductNav";
-import './products.css'
-import './product2.css'
+import Navbar from "../components/Navbar";
+import '../styles/products.css'
+import '../styles/product2.css'
 
 import { useEffect, useState } from "react";
-import Filter from "./filter";
-import Footer from './Footer'
+import Filter from "../components/Filter";
+import Footer from '../components/Footer'
 
-
+import ProductCard from "../components/ProductCard";
 
 export default function Products() {
   const [data, setData] = useState([]);
@@ -14,8 +14,10 @@ export default function Products() {
   const productItems = [...new Set(data.map((val) => val.category))]  ///take unique values and store in product item for filtering by button click
 
 
+
+  // The useEffect hook runs side effects in functional components.
   useEffect(() => {
-    fetch("http://localhost:5005/products")
+    fetch("http://localhost:5005/products") //fetch for http request
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -28,7 +30,7 @@ export default function Products() {
         setOriginalData(Array.isArray(response) ? response : response.products || []) //storing original data
       })
       .catch((err) => console.log("Error fetching products:", err));
-  }, []);
+  }, []); //[] makes sure that it only runs once when the component is first rendered.
 
 //changing data displayed based on category
   const filterItems = (cat)=>{
@@ -52,7 +54,7 @@ export default function Products() {
   return (
     <>
    
-    <Productnavbar/>
+    <Navbar/>
   
      
     <Filter  productItems = {productItems} 
@@ -65,32 +67,13 @@ export default function Products() {
        <div className="wrapper">
        {data.map((product) => (
               
-              <div key={product.id} className="single-card">
-                  <div className="img-area">
-                      <img src={product.image} alt="" />
-                      <div className="overlay">
-                          <button className='add-to-cart'>Add to cart</button>
-                      </div>
-                  </div>
-                  <div className="info">
-                  <h3>{product.name}</h3>
-                  <p className="price">${product.price}</p>
-                  <p>{product.description}</p>
-              </div>
-              </div>
+              <ProductCard key={product.id} product={product} /> 
+             
         
          
          ))}
        </div>
 
-       {/* <div key={product.id} className="card"> 
-           <img className="productimage" src={product.image}/>
-           <h1>{product.name}</h1>
-           <p className="price"> ${product.price}</p>
-           <p>{product.description}</p>
-           <p><button className="cartbtn">Add to cart</button></p>
-           
-         </div> */}
     
 
     

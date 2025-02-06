@@ -27,21 +27,8 @@ button a {
 }
 
 
- .hero h1 {
 
- width: 45%;
-  position: relative; 
-  top: 40%; /* Vertically center */
-  left: 40%;
-  transform: translate(-120%, -50%); /* Adjust for the element's own dimensions */
-  display: flex;
-  color: #009688;
-  text-align: center;
-  justify-content: center;
-  font-size: 5rem; /* Adjust size as needed */
-  text-shadow: 2px 2px 5px rgba(186, 179, 179, 0.7); /* Add shadow for better readability */
-  z-index: 2;
-}
+
 
 .content p {
   font-weight: 200;
@@ -50,22 +37,18 @@ button a {
 }
 
 
-.hero::before{
-  content:'';
-}
 .navbar {
-  /* z-index: 1000; */
+
   width: 98%;
   margin: 0 auto;
   height: 90px;
   padding: 25px 35px;
   top: 0;
   display: flex;
-  /* background-color: rgba(10, 204, 214, 0.18); */
-/* margin-bottom: 50px; */
+ 
   align-items: center;
   justify-content: space-around;
-  /* position: absolute; */
+
 }
 .logo {
   width: 120px;
@@ -146,7 +129,8 @@ text-align: center;
 
 
 
-button {
+.bttn {
+
   width: 200px;
   padding: 15px 0;
   color: #fff;
@@ -161,7 +145,7 @@ button {
 button:hover {
   border: none;
 }
-button span {
+ button span {
   background: #009688;
   height: 100%;
   width: 0;
@@ -175,12 +159,47 @@ button span {
 button:hover span {
   width: 100%;
 }
+.cartproducts{
+     
+  position: relative;
+ width: 40%;
+  margin: 25px;
+  box-shadow: 0 2px 20px rgba(152, 141, 141, 0.5);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  border-radius: 15px;
+  transition: all 0.8s ease-in-out;
+}
+.cartproducts img{
+  width: 100%;
+}
+.cartbtn{
+  width: 200px;
+  padding: 15px 0;
+  color: #fff;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  position: relative;
+}
+/* 
+.cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
- 
+} */
 
-
-
-
+.cart li{
+  list-style-type: none;
+  
+}
 
 .contact-container {
   display: flex;
@@ -335,21 +354,21 @@ footer {
 /* For small devices (phones, < 600px wide) */
 @media (max-width: 600px) {
 
-  .hero h1 {
+  /* .hero h1 {
 
     width: 40%;
      position: relative; 
-     top: 40%; /* Vertically center */
+     top: 40%;
      left: 40%;
-     transform: translate(-120%, -50%); /* Adjust for the element's own dimensions */
+     transform: translate(-120%, -50%); 
      display: flex;
      color: #009688;
      text-align: center;
      justify-content: center;
-     font-size: 3rem; /* Adjust size as needed */
-     text-shadow: 2px 2px 5px rgba(186, 179, 179, 0.7); /* Add shadow for better readability */
+     font-size: 3rem; 
+     text-shadow: 2px 2px 5px rgba(186, 179, 179, 0.7);
      z-index: 2;
-   }
+   } */
    
 
   .navbar {

@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 4rem;
-    gap: 15%;
+    gap: 10%;
   }
   
   .img1,
@@ -40,10 +40,11 @@
   .img3 {
     position: relative;
     display: flex;
+   
     flex-direction: column;
     border-radius: 3%;
     background-color: rgba(10, 204, 214, 0.18);
-    width: 300px;
+    width: 450px;
     -webkit-box-shadow: 4px 6px 8px 3px rgba(0, 0, 0, 0.59);
     -moz-box-shadow: 4px 6px 8px 3px rgba(0, 0, 0, 0.59);
     box-shadow: 4px 6px 8px 3px rgba(0, 0, 0, 0.59);

@@ -2,6 +2,11 @@
 .user-name{
     font-size: 1.3rem;
 }
+.simpleSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card-list .card-item{
     color: white;
     background: rgba(255,255,255,0.2);

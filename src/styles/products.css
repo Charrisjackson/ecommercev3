@@ -8,10 +8,7 @@
     margin: 0;
     font-family: "Courier New", Courier, monospace;
   }
-  .btnsf{
-    background-color: #009688;
-  }
- 
+
   body {
    
     background-color: black;
@@ -136,17 +133,21 @@ padding: 8px;
     font-size: 30px;
     color: #78776f;
   }
-  #filterbtns{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 4px;
-  }
 
   #filterbtns button {
+    display: flex;
+    justify-content: center; 
+ padding-left: 10%;
+    gap: 2%;
+    max-width: 50vw;
+flex-direction: column;
+right: 40%;
     background-color: grey;
   border-radius: 5px;
-
+    width: 40%;
+  }
+  #filterbtns{
+    padding-left: 40%;
   }
   
   .logo {
@@ -194,12 +195,19 @@ padding: 8px;
   
 
   /* responsiveness */
-  @media only screen and (min-width: 370px) and (max-width: 699px) {
+  @media only screen and (min-width: 340px) and (max-width: 699px) {
     #product-list {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       max-width: 80%;
       margin: 0 auto;
+    }
+    .productNav {
+      padding: 20px;
+    }
+  
+    .productNav {
+      justify-content: center;
     }
     .content {
       display: grid;
@@ -208,7 +216,7 @@ padding: 8px;
       margin: 0 auto;
       overflow: scroll;
     }
-    .nav-links a {
+    .productNav-links a {
       margin: 0.5rem;
       text-decoration: none;
     }
@@ -218,6 +226,11 @@ padding: 8px;
       text-decoration: none;
       color: white;
     }
+    #filterbtns{
+     
+      display: flex;
+      flex-direction: column;
+      }
   }
   @media only screen and (min-width: 700px) and (max-width: 1000px) {
     #product-list {
@@ -235,4 +248,5 @@ padding: 8px;
       top: 0;
       padding-top: 0;
     }
+  
   }

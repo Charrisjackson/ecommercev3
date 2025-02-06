@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import './products.css'
-
-export default function Productnavbar() {
+import '../styles/styles.css';
+import { ShoppingCart} from 'lucide-react';
+export default function Navbar() {
   return (
     <>
-      <nav className="productNav" style={{display:'flex',background: "rgba(10, 204, 214, 0.16)", height: '90px', padding:'20px'}}>
+      <nav className="navbar">
         <p className="logo">Carmani's.</p>
         <ul>
           <li>
@@ -15,6 +15,11 @@ export default function Productnavbar() {
           </li>
           <li>
             <Link to="/contact">Contact</Link>
+
+          </li>
+          <li>
+            <Link to="/cart">   <ShoppingCart /></Link>
+            
           </li>
         </ul>
       </nav>

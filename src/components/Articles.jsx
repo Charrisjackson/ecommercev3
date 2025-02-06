@@ -1,4 +1,4 @@
-import './articles.css'
+import '../styles/articles.css'
 import { NavLink, Link } from 'react-router-dom';
 import bookbag from '../assets/bookbag.png'
 import macbook from '../assets/macbook.png'
@@ -27,7 +27,7 @@ export default function Articles(){
                 <div id="img1">
                   <img
                     src='https://cdn.ttgtmedia.com/visuals/digdeeper/1.jpg'
-                    style={{width: "275px", height: "168px"}}
+                    style={{width: "100vw", height: "168px"}}
                   />
                   <div className="dates">Dec 10, 2024</div>
                   <hr className="new1" />
@@ -52,7 +52,7 @@ export default function Articles(){
                 <div id="img2">
                   <img
                     src='https://adtmag.com/pages/topic-pages/-/media/ECG/redmondmag/Images/IntroImagesBigSmall/WindowsCloudBlueSkySmall.jpg'
-                    style={{width: "275px", height: "168px"}}
+                    style={{width: "100vw", height: "168px"}}
                   />
                   <div className="dates">Nov 25, 2024</div>
                   <hr className="new1" />
@@ -76,7 +76,7 @@ export default function Articles(){
                 <div id="img3">
                   <img
                     src='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7d2XhgorVMz7kQVKHSHYNQ.jpeg'
-                    style={{width: "275px", height: "168px"}}
+                    style={{width: "100vw", height: "168px"}}
                   />
                   <div className="dates">Jan 26, 2025</div>
                   <hr className="new1" />

@@ -9,18 +9,10 @@ import { fileURLToPath } from 'url';
 
 //initializing express
 const app = express()
+//enabling cors to handle cross origin request
 app.use(cors())
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-
-
-
-
-
-app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.static(path.join(__dirname, "../dist")));
 
 
 //creating connection between db and codebase 
@@ -32,15 +24,12 @@ const db = mysql2.createConnection({
 
 })
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../dist/index.html"));
-//   });
 
-
-
+//using express to create a route for my product information
   app.get('/', (req,res)=>{
     return res.json('from backend side')
 })
+//creating a route for products and 
 app.get('/products', (req,res)=>{
     const sql = 'SELECT * FROM products'
     db.query(sql, (err,data)=>{

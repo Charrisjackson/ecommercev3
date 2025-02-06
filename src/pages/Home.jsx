@@ -1,16 +1,13 @@
-import Navbar from './Navbar'
-import Footer from './Footer';
-import './styles.css'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer';
+import '../styles/styles.css'
 import heroImage from '../assets/hero.jpeg';
 import { NavLink, Link } from 'react-router-dom';
-import Slider from './Slider';
-import Articles from './Articles'
+import CarouselExample from '../components/Carousels'
+import Articles from '../components/Articles'
+import hero2 from '../assets/hero2.png'
 
-import bookbag from '../assets/bookbag.png'
-import macbook from '../assets/macbook.png'
-import celcuis from '../assets/celcuis.png'
-import therapy from '../assets/therapy.png'
-const images = [macbook, bookbag, celcuis, therapy];
+import { AlignCenter } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -29,22 +26,9 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-        <div className='hero'
-      style={{
-        width: '100vw',
-        height: '60vh',
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        
-        
-        top:'10'
-      }}
-     
-    >
-  <h1>Have you ever considered becoming a Web Developer?</h1>
+      <CarouselExample    
+      />
   
-  </div>
   <div className="holder"></div>
         
       
@@ -52,19 +36,17 @@ export default function Home() {
   <div className="content-wrapper">
         <div className="content" >
         
-          <p>
-            Our products have everything you need to kick off your career! Between
+          <p>Our products have everything you need to kick off your career! Between
             the long nights, headaches, tears, and constant learning and growing,
             our web developer starter pack makes your life as a tech-genius super
-            easy!
-          </p>
+            easy!</p>
         
           <div className="button">
-            <button>
+            <button className='bttn'>
             <Link to='./contact/'>Learn More<span></span></Link>
 
             </button>
-            <button>
+            <button className='bttn'>
            <Link to='./products/'>Shop now<span></span></Link>
             </button>
           </div>
@@ -74,20 +56,19 @@ export default function Home() {
                  </div>
 
                  </div>
-                 <div  className='slider'styles={{maxWidth:'1200px',
-      width:'100%',
-      height:'250px',
-      margin:'0 auto',
-      aspectRatio:'5/2',
-      border:'2px solid #009688'
-      }}>
-              
+                
         <div className="holder"></div>
+<div className="content-wrapper">
+        <div className='content'>
+        <p>  Our products suggestions are tried and true- used by developers who
+          have been in the industry for years. With top of the line Macbooks,
+          materials for the days your just want to put the computer down, and so
+          much more, we quite literally have everything you need as a beginner
+          developer, except for the bootcamps of course.</p>
+        </div>
+        </div>
 
-   <Slider imageUrls={images}/>
-             
 
-   </ div>
   <div className="holder"></div>
    <Articles/>
   <div className="holder"></div>
