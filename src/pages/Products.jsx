@@ -17,7 +17,7 @@ export default function Products() {
 
   // The useEffect hook runs side effects in functional components.
   useEffect(() => {
-    fetch("http://localhost:5005/products") //fetch for http request
+    fetch("https://ecommercev3-jpea.vercel.app/products") //fetch for http request
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
